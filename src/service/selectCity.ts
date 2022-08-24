@@ -1,7 +1,7 @@
 import { writable, get } from 'svelte/store';
 import { getTemp } from './getWeather'  
   
-import { citySelectorListStore, selectedCityListStore } from '../store/cityListStore';
+import { citySelectorListStore, selectedCityListStore, cityWeaterListStore } from '../store/cityListStore';
 import { updateLocalStorage } from './updateLocalStorage'
 
 export const selectCity = function (city:string) {

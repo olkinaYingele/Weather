@@ -6,7 +6,7 @@
 //import CitySelectoerList from "./components/CitySelectoerList.svelte";
 //import CitySelectorListStore from 'component'
 import { render, fireEvent } from '@testing-library/svelte';
-import  {writable} from 'svelte/store';
+import { writable, type Writable } from 'svelte/store';
 import CitySelectoerList from './CitySelectoerList.svelte';
 const mocData = ["test1", "test2"];
 const mocData2 = ["test3", "test4"];

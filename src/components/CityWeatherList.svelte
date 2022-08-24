@@ -8,5 +8,7 @@
 </script>
 
 {#each $cityWeatherStore as city}
-     <CityWeather cityName={city.name} cityTemp={city.temp} removeSelectedCity={removeSelectedCity} />
+     <!-- <CityWeather cityName={city.name} cityTemp={city.temp} removeSelectedCity={removeSelectedCity} /> -->
+     <CityWeather cityName={city.name} cityTemp={city.temp} />
+     <button on:click={() => removeSelectedCity(city.name)}> - </button>
  {/each}

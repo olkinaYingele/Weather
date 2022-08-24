@@ -1,7 +1,7 @@
 import { writable, get } from 'svelte/store';
-import { getTemp } from '../services/getWeather'  
+//import { getTemp } from '../services/getWeather'  
   
-import { citySelectorListStore, selectedCityListStore } from 'src/store/cityListStore';
+import { citySelectorListStore, selectedCityListStore, cityWeaterListStore } from 'src/store/cityListStore';
 import { updateLocalStorage } from './updateLocalStorage'
 
 export const removeSelectedCity = function (city:string) {
@@ -13,7 +13,15 @@ export const removeSelectedCity = function (city:string) {
         selectedCityListStore.update(val => {
             //console.log("val = ", val);
             //console.log("val.indexOf(city) = ", val.indexOf(city))
-            val.splice(val.indexOf(city), 1)
+            val.splice(cityIndex, 1)
+            //console.log("val = ", val);
+           
+            return[...val]
+        })
+        cityWeaterListStore.update(val => {
+            //console.log("val = ", val);
+            //console.log("val.indexOf(city) = ", val.indexOf(city))
+            val.splice(cityIndex, 1)
             //console.log("val = ", val);
            
             return[...val]

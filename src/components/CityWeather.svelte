@@ -2,8 +2,8 @@
     //import { removeSelectedCity } from '../service/unselectCity'
     export let cityName:string;
     export let cityTemp:number;
-    export let removeSelectedCity:Function;
+    //export let removeSelectedCity:Function;
 
 </script>
 
-{cityName}: {cityTemp}°C <button on:click={() => removeSelectedCity(cityName)}> - </button>
+{cityName}: {cityTemp}°C <!-- <button on:click={() => removeSelectedCity(cityName)}> - </button> -->
